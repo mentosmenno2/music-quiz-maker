@@ -25,6 +25,7 @@ jobs:
         composer install --prefer-dist --no-suggest
     - name: Setup Laravel Installation
       run: |
+        cp ./.env.example ./.env
         php artisan key:generate
     - name: Composer Test
       run: |
