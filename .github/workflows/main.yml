@@ -23,6 +23,9 @@ jobs:
     - name: Composer Install dependencies
       run: |
         composer install --prefer-dist --no-suggest
+    - name: Setup Laravel Installation
+      run: |
+        php artisan key:generate
     - name: Composer Test
       run: |
         composer run-script test
@@ -42,4 +45,4 @@ jobs:
       - name: NPM JSHint
         run: npm run lint
       - name: NPM Build
-        run: npm run build
+        run: npm run prod
