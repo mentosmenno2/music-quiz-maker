@@ -1,0 +1,49 @@
+{
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "extends": [
+      "eslint:recommended"
+    ],
+    "globals": {
+      "module": true,
+      "window": true,
+      "require": true
+    },
+    "rules": {
+      "no-console": "off",
+      "no-multi-spaces": [
+        1,
+        {
+          "exceptions": {
+            "VariableDeclarator": true
+          }
+        }
+      ],
+      "indent": [
+        "error",
+        "tab",
+        {
+          "VariableDeclarator": 1,
+          "ArrayExpression": "first",
+          "ObjectExpression": "first",
+          "ImportDeclaration": "first"
+        }
+      ],
+      "semi": [
+        "warn",
+        "always"
+      ],
+      "space-before-blocks": [
+        "warn",
+        "always"
+      ],
+      "no-trailing-spaces": "warn",
+      "react/display-name": "off",
+      "react/prop-types": "off"
+    }
+  }
