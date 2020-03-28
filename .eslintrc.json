@@ -7,7 +7,6 @@
       }
     },
     "extends": [
-      "plugin:vue/base",
       "eslint:recommended"
     ],
     "globals": {
@@ -16,7 +15,6 @@
 	  "require": true,
 	  "jQuery": true,
 	  "$": true,
-	  "Vue": true,
 	  "console": true
     },
     "rules": {
@@ -51,4 +49,4 @@
       "react/display-name": "off",
       "react/prop-types": "off"
     }
-}
+  }

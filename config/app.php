@@ -13,7 +13,7 @@ return [
 	|
 	*/
 
-	'name' => env('APP_NAME', 'Laravel'),
+	'name' => env('APP_NAME', 'Boodschappenbezorger'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -106,7 +106,7 @@ return [
 	|
 	*/
 
-	'faker_locale' => 'en_US',
+	'faker_locale' => 'nl_NL',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -175,6 +175,10 @@ return [
 		App\Providers\EventServiceProvider::class,
 		App\Providers\RouteServiceProvider::class,
 
+		/*
+		 * Custom Service Providers...
+		 */
+		App\Providers\TranslationServiceProvider::class,
 	],
 
 	/*

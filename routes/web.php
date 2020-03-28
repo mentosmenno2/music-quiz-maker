@@ -17,6 +17,14 @@ Route::get('/', function () {
 	return view('welcome');
 });
 
-Auth::routes();
+Route::middleware(['auth'])->namespace('Frontend')->prefix('frontend')->group(function () {
+	Route::get('/', 'HomeController@index')->name('home');
 
-Route::get('/home', 'HomeController@index')->name('home');
+	Route::middleware(['role:admin'])->namespace('Admin')->prefix('admin')->group(function () {
+		//
+	});
+});
+
+
+
+Auth::routes();

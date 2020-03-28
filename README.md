@@ -1,5 +1,9 @@
 [![GitHub Actions status](https://github.com/mentosmenno2/music-quiz-maker/workflows/Build%20%26%20test/badge.svg)](https://github.com/mentosmenno2/music-quiz-maker/actions)
 
+# Music Quiz Maker
+
+Based on the Laravel Framewrork
+
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 <p align="center">

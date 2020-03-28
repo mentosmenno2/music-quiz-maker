@@ -1,32 +1,33 @@
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
- */
-
 require('./bootstrap');
+require('./modules/skiplink');
 
-/**
- * The following block of code may be used to automatically register your
- * Vue components. It will recursively scan this directory for the Vue
- * components and automatically register them with their "basename".
- *
- * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
- */
 
-// const files = require.context('./', true, /\.vue$/i)
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
+( function( app ) {
+	'use strict';
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+	app.instantiate = function( elem ) {
+		const $this   = $( elem );
+		const module  = $this.attr( 'data-module' );
+		if ( module === undefined ) {
+			throw 'Module not defined (use data-module="")';
+		} else if ( module in app ) {
+			new app[ module ]( elem );
+			$this.attr( 'data-initialized', true );
+		} else {
+			throw 'Module \'' + module + '\' not found';
+		}
+	};
 
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
+	$( '[data-module]' ).each( function() {
+		app.instantiate( this );
+	} );
 
-/* eslint-disable */
-const app = new Vue({
-	el: '#app',
-});
-/* eslint-enable */
+	function handleFirstTab( e ) {
+		if ( 9 === e.keyCode ) {
+			$( 'body' ).addClass( 'user-is-tabbing' );
+			window.removeEventListener( 'keydown', handleFirstTab );
+		}
+	}
+
+	window.addEventListener( 'keydown', handleFirstTab );
+}( window.app = window.app || {} ) );
