@@ -17,7 +17,7 @@ Route::get('/', function () {
 	return view('welcome');
 });
 
-Route::middleware(['auth'])->namespace('Frontend')->prefix('frontend')->group(function () {
+Route::middleware(['auth'])->namespace('Dashboard')->prefix('dashboard')->group(function () {
 	Route::get('/', 'HomeController@index')->name('home');
 
 	Route::middleware(['role:admin'])->namespace('Admin')->prefix('admin')->group(function () {
