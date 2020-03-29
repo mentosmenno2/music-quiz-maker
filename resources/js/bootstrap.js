@@ -7,15 +7,13 @@ window._ = require('lodash');
  */
 
 try {
+	// Popper
 	window.Popper = require('popper.js').default;
 
+	// jQuery
 	window.$ = window.jQuery = require('jquery');
-	$.ajaxSetup({
-		headers: {
-			'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-		}
-	});
 
+	// Bootstrap
 	require('bootstrap');
 } catch (e) {
 	console.error(e);
@@ -30,6 +28,17 @@ try {
 window.axios = require('axios');
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+
+// Set jQuery ajax headers
+var ajaxHeaders = {
+	'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+};
+if ( $('meta[name="access-token"]').attr('content') ) {
+	ajaxHeaders.Authorization = $('meta[name="access-token"]').attr('content');
+}
+$.ajaxSetup({
+	headers: ajaxHeaders
+});
 
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
