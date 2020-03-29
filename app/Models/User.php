@@ -39,6 +39,11 @@ class User extends Authenticatable
 		'email_verified_at' => 'datetime',
 	];
 
+	public function accessTokens()
+	{
+		return $this->hasMany(AccessToken::class);
+	}
+
 	public function games()
 	{
 		return $this->hasMany(Game::class);
