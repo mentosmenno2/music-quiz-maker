@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Song extends Model
 {
-	public function game()
+	public function playlist()
 	{
-		return $this->belongsTo(Game::class);
+		return $this->belongsTo(Playlist::class);
 	}
 }

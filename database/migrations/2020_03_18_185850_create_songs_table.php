@@ -15,10 +15,10 @@ class CreateSongsTable extends Migration
 	{
 		Schema::create('songs', function (Blueprint $table) {
 			$table->id();
-			$table->foreignId('game_id');
+			$table->foreignId('playlist_id');
 			$table->timestamps();
 
-			$table->foreign('game_id')->references('id')->on('games');
+			$table->foreign('playlist_id')->references('id')->on('playlists');
 		});
 	}
 
@@ -30,7 +30,7 @@ class CreateSongsTable extends Migration
 	public function down()
 	{
 		Schema::table('songs', function (Blueprint $table) {
-			$table->dropForeign(['game_id']);
+			$table->dropForeign(['playlist_id']);
 		});
 
 		Schema::dropIfExists('songs');

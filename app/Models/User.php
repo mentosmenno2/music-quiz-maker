@@ -44,8 +44,8 @@ class User extends Authenticatable
 		return $this->hasMany(AccessToken::class);
 	}
 
-	public function games()
+	public function playlists()
 	{
-		return $this->hasMany(Game::class);
+		return $this->hasMany(Playlist::class);
 	}
 }
