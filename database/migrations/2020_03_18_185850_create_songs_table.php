@@ -16,6 +16,12 @@ class CreateSongsTable extends Migration
 		Schema::create('songs', function (Blueprint $table) {
 			$table->id();
 			$table->foreignId('playlist_id');
+			$table->string('title');
+			$table->string('artist');
+			$table->string('source_id');
+			$table->string('source_type');
+			$table->integer('start_time');
+			$table->integer('end_time');
 			$table->timestamps();
 
 			$table->foreign('playlist_id')->references('id')->on('playlists');
