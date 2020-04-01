@@ -19,10 +19,7 @@ Route::middleware('auth:access_token')->get('/user', function (Request $request)
 });
 
 Route::namespace('Api')->group(function () {
-
 	Route::middleware(['auth:access_token'])->namespace('Dashboard')->prefix('dashboard')->group(function () {
 		Route::apiResource('playlists', 'PlaylistController');
 	});
-
 });
-
