@@ -34,7 +34,7 @@ var ajaxHeaders = {
 	'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
 };
 if ( $('meta[name="access-token"]').attr('content') ) {
-	ajaxHeaders.Authorization = $('meta[name="access-token"]').attr('content');
+	ajaxHeaders.Authorization = 'Bearer ' + $('meta[name="access-token"]').attr('content');
 }
 $.ajaxSetup({
 	headers: ajaxHeaders
