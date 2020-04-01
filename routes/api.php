@@ -17,3 +17,12 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:access_token')->get('/user', function (Request $request) {
 	return $request->user();
 });
+
+Route::namespace('Api')->group(function () {
+
+	Route::middleware(['auth:access_token'])->namespace('Dashboard')->prefix('dashboard')->group(function () {
+		Route::apiResource('playlists', 'PlaylistController');
+	});
+
+});
+
