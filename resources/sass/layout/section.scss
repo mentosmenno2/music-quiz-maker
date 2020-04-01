@@ -1,0 +1,11 @@
+.section {
+	padding: $default-padding 0;
+
+	&--no-top {
+		padding-top: 0;
+	}
+
+	&--no-bottom {
+		padding-bottom: 0;
+	}
+}

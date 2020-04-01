@@ -1,8 +1,40 @@
-// Fonts
+// Imports
 // @import url('https://fonts.googleapis.com/css?family=Nunito');
 
-// Variables
-@import 'variables';
-
-// Bootstrap
+// Dependencies
 // @import '~bootstrap/scss/bootstrap';
+
+@import '~normalize.css/normalize.css';
+
+// Common
+@import '_common/mixins';
+@import '_common/default';
+@import '_common/variables';
+@import '_common/colors';
+@import '_common/fonts';
+@import '_common/images';
+@import '_common/print';
+@import '_common/lists';
+@import '_common/screen-reader';
+@import '_common/styleguide';
+@import '_common/tables';
+@import '_common/typography';
+@import '_common/wp-classes';
+@import '_common/oembed';
+@import '_common/forms';
+@import '_common/entry-content';
+@import '_common/align';
+
+// Layout
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/container';
+@import 'layout/section';
+@import 'layout/grid/_grid';
+
+// Components
+@import 'components/buttons';
+@import 'components/skip-to-content';
+@import 'components/gravity-forms';
+@import 'components/social-share';
+@import 'components/navigation/primary-nav';

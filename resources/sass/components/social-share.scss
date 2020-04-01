@@ -1,0 +1,10 @@
+.social-share {
+	@include list-unstyled;
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+
+	& > * + * {
+		margin-left: $default-padding/2;
+	}
+}

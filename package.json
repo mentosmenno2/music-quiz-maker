@@ -36,5 +36,8 @@
         "stylelint-scss": "^3.14.2",
         "stylelint-webpack-plugin": "^1.2.3",
         "vue-template-compiler": "^2.6.11"
+    },
+    "dependencies": {
+        "normalize.css": "^8.0.1"
     }
 }

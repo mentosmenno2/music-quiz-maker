@@ -1,0 +1,55 @@
+.entry-content {
+	& > * + * {
+		margin-top: $default-padding/2;
+
+		@include breakpoint-sm {
+			margin-top: $default-padding;
+		}
+	}
+
+	h2 + *,
+	h3 + *,
+	h4 + * {
+		margin-top: 10px;
+	}
+
+	@include breakpoint-sm {
+		h2 + *,
+		h3 + *,
+		h4 + * {
+			margin-top: $default-padding/2;
+		}
+	}
+
+	.wp-block-image,
+	.wp-block-embed {
+		margin: 0;
+
+		figcaption {
+			@include font-size(14px);
+			color: $black;
+			text-align: center;
+		}
+	}
+
+	blockquote {
+		border: 1px solid $black;
+		margin-left: 0;
+		margin-right: 0;
+		margin-bottom: 0;
+		padding: $default-padding/2;
+	}
+
+	p {
+
+		// Gutenberg editor
+		&.has-big-font-size {
+
+		}
+	}
+
+	ul,
+	ol {
+		line-height: line-height(16px, 24px);
+	}
+}

@@ -1,0 +1,90 @@
+// oEmbed
+//
+// A default oEmbed generated in the WP content editor. Will not work in the styleguide.
+//
+// Markup: ../../templates/styleguide/common/oembed.twig
+//
+//
+// Styleguide Molecules.WordPress.oEmbed
+.oembed-component {
+	position: relative;
+	background-color: transparent;
+	cursor: pointer;
+	margin-bottom: $default-padding;
+	background-size: cover;
+	background-position: center;
+
+	&__blocked {
+		position: relative;
+		padding: $default-padding;
+		z-index: 2;
+	}
+
+	p {
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+
+	&[data-type='instagram'] {
+		padding: 25px 0 56.25% 0;
+		height: 0;
+	}
+
+	&--loaded {
+		padding: 25px 0 25% 0;
+		height: 0;
+
+		&[data-type='youtube'] {
+			padding: 25px 0 56.25% 0;
+			height: 0;
+		}
+
+		&[data-type='vimeo'] {
+			position: relative;
+			padding: 25px 0 38% 0;
+		}
+
+		&[data-type='youtube'],
+		&[data-type='vimeo'] {
+			iframe {
+				display: none;
+			}
+		}
+	}
+
+	iframe,
+	object {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	&__play {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 80px;
+		height: 80px;
+		transform: translateY(-50%) translateX(-50%);
+		border-radius: 50%;
+		content: '';
+		background-color: white;
+
+		// Play icon
+		&::before {
+			position: absolute;
+			top: 50%;
+			left: calc(50% + 5px);
+			transform: translateY(-50%) translateX(-50%);
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 15px 0 15px 30px;
+			border-color: transparent transparent transparent $primary;
+			content: '';
+		}
+	}
+}

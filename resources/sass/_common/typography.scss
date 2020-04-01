@@ -1,0 +1,98 @@
+@mixin body-styles {
+	@include font-normal;
+	-webkit-font-smoothing: antialiased;
+}
+
+body {
+	@include body-styles;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+h1,
+.h1 {
+
+}
+
+h2,
+.h2 {
+
+}
+
+h3,
+.h3 {
+
+}
+
+h4,
+.h4 {
+
+}
+
+p {
+	line-height: line-height(16px, 24px);
+	margin: 0;
+}
+
+a {
+	text-decoration: underline;
+	color: $black;
+}
+
+strong {
+	font-weight: bold;
+}
+
+dl {
+	margin-top: 0; // Remove browser default
+	margin-bottom: $default-padding;
+}
+
+dt,
+dd {
+	line-height: inherit;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin-left: 0; // Undo browser default
+}
+
+address {
+	font-style: normal;
+}
+
+// Focus style
+* {
+	&:focus {
+		@include focus-style;
+	}
+
+	&:not(input),
+	&:not(textarea),
+	&:not(select) {
+		&:focus {
+			outline: none;
+		}
+	}
+}
+
+body.user-is-tabbing {
+	* {
+		&:focus {
+			@include focus-style;
+		}
+	}
+}

@@ -1,0 +1,97 @@
+// Primary Navigation
+//
+// A primary navigation using BEM menu walker, adjust the classname based on your given name.
+//
+// Markup: ../../templates/styleguide/components/navigation/primary-nav.twig
+//
+//
+// Styleguide Molecules.Navigation.Primary
+.primary-nav {
+	@include list-unstyled;
+	display: flex;
+	flex-direction: column;
+
+	@include breakpoint-md {
+		flex-direction: row;
+	}
+
+	&__item {
+		display: block;
+
+		@include breakpoint-md {
+			display: inline-block;
+		}
+	}
+
+	/* Specific item (where x = post_id) */
+	&__item--x {}
+
+	/* Parent item */
+	&__item--parent {
+		position: relative;
+
+		.primary-nav__link {
+			padding-right: $default-padding/2;
+		}
+	}
+
+	/* Active page item */
+	&__item--active {}
+
+	/* Parent of the current active page */
+	&__item--parent--active {}
+
+	/* Ancestor of the current active page */
+	&__item--ancestor--active {}
+
+	/* Link */
+	&__link {
+		display: block;
+		padding: $default-padding/2;
+	}
+
+	/* Sub menu trigger */
+	&__arrow {
+		position: absolute;
+		top: 0;
+		right: 0;
+		background-color: transparent;
+		line-height: inherit;
+		padding: 0;
+		height: 46px; // based on the height of the menu item
+		color: $primary;
+	}
+}
+
+/* Sub menu class */
+.primary-nav-sub {
+	@include list-unstyled;
+
+	position: relative;
+	display: none;
+
+	&__link {
+		@extend .primary-nav__link;
+	}
+
+	@include breakpoint-md {
+		position: absolute;
+		top: 44px; // based on the height of the menu item minus 2px border
+		left: 0;
+		min-width: 230px;
+		border: 1px solid #f4f4f4;
+		box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+		z-index: 2;
+		background-color: white;
+
+		.primary-nav-sub {
+			left: 100%;
+			top: 0;
+		}
+
+		.primary-nav__arrow {
+			transform: rotate(-90deg);
+			width: 46px; // based on the height of the menu item
+		}
+	}
+}

@@ -1,0 +1,45 @@
+.row {
+	&--nowrap {
+		flex-wrap: nowrap;
+	}
+
+	&--wrap {
+		flex-wrap: wrap;
+	}
+
+	&--sm-nowrap {
+		@include breakpoint-sm {
+			flex-wrap: nowrap;
+		}
+	}
+
+	&--sm-wrap {
+		@include breakpoint-sm {
+			flex-wrap: wrap;
+		}
+	}
+
+	&--md-nowrap {
+		@include breakpoint-md {
+			flex-wrap: nowrap;
+		}
+	}
+
+	&--md-wrap {
+		@include breakpoint-md {
+			flex-wrap: wrap;
+		}
+	}
+
+	&--lg-nowrap {
+		@include breakpoint-lg {
+			flex-wrap: nowrap;
+		}
+	}
+
+	&--lg-wrap {
+		@include breakpoint-lg {
+			flex-wrap: wrap;
+		}
+	}
+}

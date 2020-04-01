@@ -1,0 +1,156 @@
+// Gravity Forms
+//
+// Markup: ../../templates/styleguide/components/gravity-forms.twig
+//
+//
+// Styleguide Molecules.Gravity Forms
+.gform_wrapper {
+	form {
+
+		// GF form title
+		.gform_heading {
+			margin-bottom: $default-padding/2;
+		}
+
+		.gform_body {
+
+			// A gravity form is wrapped in this unordered list tag
+			ul {
+				@include list-unstyled;
+
+				// A gravity form input is wrapped in this list item tag
+				li {
+					margin-bottom: $default-padding;
+
+					// Required field
+					.gfield_required {
+						padding-left: 1px;
+						color: red;
+					}
+
+					// GF Radiobuttons & GF checkboxes
+					.gfield_radio,
+					.gfield_checkbox {
+
+						// To display checkboxes & radiobutons horizontally, uncomment the lines below
+						// display: flex;
+						// flex-wrap: wrap;
+
+						// Items in a radiobutton and/or checkbox field
+						li {
+							margin-bottom: $default-padding/2;
+
+							// To display checkboxes & radiobutons horizontally, uncomment the lines below
+							// margin-right: $default-padding/2;
+						}
+
+						input {
+							position: absolute;
+							top: auto;
+							left: -9999px;
+							opacity: 0;
+
+							&:checked + label {
+								&:after {
+									display: block;
+								}
+							}
+
+							&:focus + label:before {
+								@include focus-style;
+							}
+						}
+
+						label {
+							@include radiobutton-label;
+						}
+					}
+
+					// GF Checkboxes
+					.gfield_checkbox {
+						label {
+							@include checkbox-label;
+						}
+					}
+
+					// GF consent field
+					.ginput_container_consent {
+						@extend .gfield_checkbox;
+					}
+
+					// GF section field
+					.gsection {
+						&_title {
+
+						}
+
+						&_description {
+							margin-top: 10px;
+						}
+					}
+
+					// Datepicker field
+					.ginput_container_date {
+						.clear-multi {
+							display: flex;
+							justify-content: space-between;
+
+							@include breakpoint-sm {
+								justify-content: flex-start;
+								margin: 0 (-$default-padding/2);
+
+								.ginput_container {
+									margin: 0 $default-padding/2;
+								}
+							}
+						}
+					}
+
+					.ginput_complex {
+						display: flex;
+						flex-direction: column;
+
+						& > * + * {
+							margin-top: $default-padding;
+
+							@include breakpoint-sm {
+								margin-top: 0;
+							}
+						}
+
+						@include breakpoint-sm {
+							flex-direction: row;
+							margin: 0 (-$default-padding/2);
+
+							.name_first,
+							.name_last {
+								width: 100%;
+								padding: 0 $default-padding/2;
+							}
+						}
+					}
+
+					&.gfield_error {
+						position: relative;
+						padding: $default-padding/2;
+						background-color: #ffecb3;
+
+						.validation_message {
+							@include font-size(14px);
+							margin-top: 10px;
+							border-top: 1px solid $black;
+							padding-top: 10px;
+						}
+					}
+				}
+			}
+		}
+
+		.validation_error {
+			position: relative;
+			padding: $default-padding/2;
+			background-color: #ffecb3;
+			margin: $default-padding/2 0;
+		}
+	}
+}

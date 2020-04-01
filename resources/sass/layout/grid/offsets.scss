@@ -1,0 +1,287 @@
+/**
+*
+* Offset default
+*
+**/
+
+.offset-1 {
+	margin-left: calc(100% / 12); // 8.333%
+}
+
+.offset-2 {
+	margin-left: calc(100% / 6); // 16.666%
+}
+
+.offset-3 {
+	margin-left: calc(100% / 4); // 25%
+}
+
+.offset-4 {
+	margin-left: calc(100% / 3); // 33.333%
+}
+
+.offset-5 {
+	margin-left: calc(100% / 2.4); // 41.666%
+}
+
+.offset-6 {
+	margin-left: calc(100% / 2); // 50%
+}
+
+.offset-7 {
+	margin-left: calc(100% / 1.71); // 58.479%
+}
+
+.offset-8 {
+	margin-left: calc(100% / 1.5); // 66.666%
+}
+
+.offset-9 {
+	margin-left: calc(100% / 1.33); // 75%
+}
+
+.offset-10 {
+	margin-left: calc(100% / 1.2); // 83.333%
+}
+
+.offset-11 {
+	margin-left: calc(100% / 1.09); // 91.74%
+}
+
+.offset-12 {
+	margin-left: calc(100% / 1); // 100%
+}
+
+/**
+*
+* Offset from breakpoint-sm and up
+*
+**/
+
+.offset-sm-1 {
+	@include breakpoint-sm {
+		margin-left: calc(100% / 12); // 8.333%
+	}
+}
+
+.offset-sm-2 {
+	@include breakpoint-sm {
+		margin-left: calc(100% / 6); // 16.666%
+	}
+}
+
+.offset-sm-3 {
+	@include breakpoint-sm {
+		margin-left: calc(100% / 4); // 25%
+	}
+}
+
+.offset-sm-4 {
+	@include breakpoint-sm {
+		margin-left: calc(100% / 3); // 33.333%
+	}
+}
+
+.offset-sm-5 {
+	@include breakpoint-sm {
+		margin-left: calc(100% / 2.4); // 41.666%
+	}
+}
+
+.offset-sm-6 {
+	@include breakpoint-sm {
+		margin-left: calc(100% / 2); // 50%
+	}
+}
+
+.offset-sm-7 {
+	@include breakpoint-sm {
+		margin-left: calc(100% / 1.71); // 58.479%
+	}
+}
+
+.offset-sm-8 {
+	@include breakpoint-sm {
+		margin-left: calc(100% / 1.5); // 66.666%
+	}
+}
+
+.offset-sm-9 {
+	@include breakpoint-sm {
+		margin-left: calc(100% / 1.33); // 75%
+	}
+}
+
+.offset-sm-10 {
+	@include breakpoint-sm {
+		margin-left: calc(100% / 1.2); // 83.333%
+	}
+}
+
+.offset-sm-11 {
+	@include breakpoint-sm {
+		margin-left: calc(100% / 1.09); // 91.74%
+	}
+}
+
+.offset-sm-12 {
+	@include breakpoint-sm {
+		margin-left: calc(100% / 1); // 100%
+	}
+}
+
+/**
+*
+* Offset from breakpoint-md and up
+*
+**/
+
+.offset-md-1 {
+	@include breakpoint-md {
+		margin-left: calc(100% / 12); // 8.333%
+	}
+}
+
+.offset-md-2 {
+	@include breakpoint-md {
+		margin-left: calc(100% / 6); // 16.666%
+	}
+}
+
+.offset-md-3 {
+	@include breakpoint-md {
+		margin-left: calc(100% / 4); // 25%
+	}
+}
+
+.offset-md-4 {
+	@include breakpoint-md {
+		margin-left: calc(100% / 3); // 33.333%
+	}
+}
+
+.offset-md-5 {
+	@include breakpoint-md {
+		margin-left: calc(100% / 2.4); // 41.666%
+	}
+}
+
+.offset-md-6 {
+	@include breakpoint-md {
+		margin-left: calc(100% / 2); // 50%
+	}
+}
+
+.offset-md-7 {
+	@include breakpoint-md {
+		margin-left: calc(100% / 1.71); // 58.479%
+	}
+}
+
+.offset-md-8 {
+	@include breakpoint-md {
+		margin-left: calc(100% / 1.5); // 66.666%
+	}
+}
+
+.offset-md-9 {
+	@include breakpoint-md {
+		margin-left: calc(100% / 1.33); // 75%
+	}
+}
+
+.offset-md-10 {
+	@include breakpoint-md {
+		margin-left: calc(100% / 1.2); // 83.333%
+	}
+}
+
+.offset-md-11 {
+	@include breakpoint-md {
+		margin-left: calc(100% / 1.09); // 91.74%
+	}
+}
+
+.offset-md-12 {
+	@include breakpoint-md {
+		margin-left: calc(100% / 1); // 100%
+	}
+}
+
+/**
+*
+* Offset from breakpoint-md and up
+*
+**/
+
+.offset-lg-1 {
+	@include breakpoint-lg {
+		margin-left: calc(100% / 12); // 8.333%
+	}
+}
+
+.offset-lg-2 {
+	@include breakpoint-lg {
+		margin-left: calc(100% / 6); // 16.666%
+	}
+}
+
+.offset-lg-3 {
+	@include breakpoint-lg {
+		margin-left: calc(100% / 4); // 25%
+	}
+}
+
+.offset-lg-4 {
+	@include breakpoint-lg {
+		margin-left: calc(100% / 3); // 33.333%
+	}
+}
+
+.offset-lg-5 {
+	@include breakpoint-lg {
+		margin-left: calc(100% / 2.4); // 41.666%
+	}
+}
+
+.offset-lg-6 {
+	@include breakpoint-lg {
+		margin-left: calc(100% / 2); // 50%
+	}
+}
+
+.offset-lg-7 {
+	@include breakpoint-lg {
+		margin-left: calc(100% / 1.71); // 58.479%
+	}
+}
+
+.offset-lg-8 {
+	@include breakpoint-lg {
+		margin-left: calc(100% / 1.5); // 66.666%
+	}
+}
+
+.offset-lg-9 {
+	@include breakpoint-lg {
+		margin-left: calc(100% / 1.33); // 75%
+	}
+}
+
+.offset-lg-10 {
+	@include breakpoint-lg {
+		margin-left: calc(100% / 1.2); // 83.333%
+	}
+}
+
+.offset-lg-11 {
+	@include breakpoint-lg {
+		margin-left: calc(100% / 1.09); // 91.74%
+	}
+}
+
+.offset-lg-12 {
+	@include breakpoint-lg {
+		margin-left: calc(100% / 1); // 100%
+	}
+}

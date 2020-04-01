@@ -1,0 +1,59 @@
+/**
+*
+* Row
+* Acts like the container for the column elements
+*
+**/
+
+.row {
+	@include list-unstyled;
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: (-$gutter/2);
+	margin-right: (-$gutter/2);
+
+	// Add space when a row class is followed by a row class
+	& + .row {
+		margin-top: $gutter;
+	}
+
+	& + .row--spacing {
+		margin-top: 0;
+	}
+
+	// Modifier to add spacing to the columns inside
+	&--spacing {
+		margin-top: (-$gutter/2);
+
+		@include breakpoint-sm {
+			margin-top: (-$gutter);
+		}
+
+		> .col,
+		> [class*='col-'] {
+			margin-top: $gutter/2;
+
+			@include breakpoint-sm {
+				margin-top: $gutter;
+			}
+		}
+
+		// Add space when a row class is followed by a row class
+		// Since the row--spacing sets a negative margin on itself, we reset it.
+		& + .row {
+			margin-top: 0;
+		}
+	}
+
+	// Align columns vertically centered
+	&--align-center {
+		> .col,
+		> [class*='col-'] {
+			align-self: center;
+		}
+	}
+
+	&--space-between {
+		justify-content: space-between;
+	}
+}

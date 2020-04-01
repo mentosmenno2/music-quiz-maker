@@ -1,0 +1,17 @@
+.container {
+	position: relative;
+	padding: 0 $default-padding/2;
+	margin: 0 auto;
+
+	@include breakpoint-sm {
+		width: $container-tablet;
+	}
+
+	@include breakpoint-md {
+		width: $container-desktop-small;
+	}
+
+	@include breakpoint-lg {
+		width: $container-desktop-large;
+	}
+}

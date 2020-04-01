@@ -1,0 +1,120 @@
+// Buttons
+//
+// Various button styles.
+//
+// Markup:
+// <a href="#" class="btn {{modifier_class}}">
+//   <span class="btn-grid">
+//		<span class="btn-grid__item">
+// 			<span class="btn__text">
+// 				Primary + icon right
+// 			</span>
+// 		</span>
+// 		<span class="btn-grid__item btn-grid__item--icon">
+// 			<span class="btn__icon">
+// 				😍
+// 			</span>
+// 		</span>
+// 	</span>
+// </a>
+//
+// .btn--primary - The primary button
+// .btn--secondary - The secondary button
+// .btn--ghost - The ghost button
+//
+// Styleguide Atoms.Buttons
+
+@mixin btn {
+	position: relative;
+	display: inline-block;
+	padding: $default-padding/2;
+	background-color: $primary;
+	text-decoration: none;
+	border: 0;
+	user-select: none;
+	color: $white;
+	cursor: pointer;
+	transition: $time;
+	-webkit-font-smoothing: antialiased;
+	-webkit-appearance: none;
+
+	&:disabled {
+		opacity: 0.8;
+		cursor: default;
+	}
+
+	&:focus,
+	&:active {
+
+	}
+
+	@include breakpoint-md {
+		&:hover {
+
+		}
+	}
+}
+
+// Styles to reset a styled button
+@mixin reset-button-styles {
+	background-color: transparent;
+	padding: 0;
+}
+
+button,
+input[type='submit'],
+input[type='button'] {
+	@include btn;
+}
+
+// color variations
+.btn {
+	&--primary {
+		@include btn;
+	}
+
+	&--secondary {
+		@include btn;
+		background-color: $secondary;
+	}
+
+	&--ghost {
+		@include btn;
+		@include reset-button-styles;
+		color: $black;
+		padding: $default-padding/2;
+		border: 2px solid $black;
+	}
+}
+
+// Button utilities
+.btn {
+	&--block {
+		display: block;
+	}
+
+	&__icon {
+		@include font-size(20px);
+		display: flex;
+		align-items: center;
+	}
+}
+
+.btn-grid {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0 -5px;
+	z-index: 1;
+
+	&__item {
+		padding: 0 5px;
+
+		// Min width of the icon you're using
+		// Flex will take care of the rest
+		&--icon {
+			min-width: 26px;
+		}
+	}
+}

@@ -1,0 +1,89 @@
+/*
+*
+* Align self start
+*
+*/
+
+.align-self-start {
+	display: flex;
+	flex-direction: column;
+	align-self: flex-start;
+}
+
+.align-self-start-sm {
+	@include breakpoint-sm {
+		align-self: flex-start;
+	}
+}
+
+.align-self-start-md {
+	@include breakpoint-md {
+		align-self: flex-start;
+	}
+}
+
+.align-self-start-lg {
+	@include breakpoint-lg {
+		align-self: flex-start;
+	}
+}
+
+/*
+*
+* Align self center
+*
+*/
+
+.align-self-center {
+	display: flex;
+	flex-direction: column;
+	align-self: center;
+}
+
+.align-self-center-sm {
+	@include breakpoint-sm {
+		align-self: center;
+	}
+}
+
+.align-self-center-md {
+	@include breakpoint-md {
+		align-self: center;
+	}
+}
+
+.align-self-center-lg {
+	@include breakpoint-lg {
+		align-self: center;
+	}
+}
+
+/*
+*
+* Align self end
+*
+*/
+
+.align-self-end {
+	display: flex;
+	flex-direction: column;
+	align-self: flex-end;
+}
+
+.align-self-end-sm {
+	@include breakpoint-sm {
+		align-self: flex-end;
+	}
+}
+
+.align-self-end-md {
+	@include breakpoint-md {
+		align-self: flex-end;
+	}
+}
+
+.align-self-end-lg {
+	@include breakpoint-lg {
+		align-self: flex-end;
+	}
+}

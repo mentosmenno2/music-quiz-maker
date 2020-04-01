@@ -1,0 +1,22 @@
+.skip-to-content {
+	@include screen-reader-text;
+	position: absolute;
+	z-index: 101;
+
+	&:active,
+	&:focus {
+		@include btn;
+		@include font-size(22px);
+		transition: 0s;
+		top: 0;
+		left: 0;
+		background-color: $primary;
+		color: white;
+		clip: auto !important;
+		height: auto;
+		width: auto;
+		margin: auto;
+		overflow: auto;
+		clip-path: inherit;
+	}
+}

@@ -1,0 +1,55 @@
+#kss-node {
+	.kss-main {
+		margin-top: 30px;
+	}
+
+	.kss-modifier__wrapper {
+		background-color: white;
+	}
+
+	.kss-style {
+		font-size: 14px;
+	}
+
+	.kss-nav__menu-item {
+		margin-bottom: 10px;
+	}
+
+	.kss-nav__ref-child {
+		margin-left: 15px;
+	}
+
+	.kss-nav__menu-link {
+		display: block;
+	}
+
+	.kss-section {
+		background-color: #f1f1f1;
+		padding: 15px 30px 30px 30px;
+		margin-bottom: 30px;
+	}
+
+	.kss-sidebar {
+		background-image: none;
+		background-color: #f1f1f1;
+	}
+
+	.kss-colors {
+		display: flex;
+		justify-content: flex-start;
+		align-items: stretch;
+		flex-wrap: wrap;
+		margin: 15px -15px 0;
+
+		> * {
+			width: 25%;
+			padding: 0 15px;
+			margin-bottom: 30px;
+		}
+
+		.kss-color {
+			margin: 0;
+			border: 0;
+		}
+	}
+}
