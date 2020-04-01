@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 
 /**
  * Translate the given key.
@@ -24,7 +25,7 @@ function trans(key, replace = {})
 
 	_.forEach(replace, (value, key) => {
 		translation = translation.replace(':' + key, value);
-	})
+	});
 
 	return translation;
 }
@@ -36,3 +37,5 @@ function __(key, replace = {}) {
 function lang(key, replace = {}) {
 	return trans(key, replace);
 }
+
+/* eslint-enable no-unused-vars */

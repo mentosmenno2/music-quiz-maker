@@ -1,4 +1,5 @@
 require('./bootstrap');
+require('./helpers/translations');
 require('./modules/skiplink');
 
 

@@ -13,9 +13,10 @@
       "module": true,
       "window": true,
 	  "require": true,
+	  "console": true,
 	  "jQuery": true,
 	  "$": true,
-	  "console": true
+	  "_": true
     },
     "rules": {
       "no-console": "off",
